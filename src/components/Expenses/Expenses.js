@@ -22,7 +22,7 @@ function Expenses(props) {
               key={expense.id} //https://reactjs.org/docs/lists-and-keys.html#keys
               title={expense.title}
               amount={expense.amount}
-              date={expense.date}
+              date={expense.date}d
             />
           );
         })} */}
