@@ -16,16 +16,17 @@ function Expenses(props) {
 			<Card className="expenses">
 				<ExpensesFilter selected={yearValue} onFilterExpense={filterExpenseHandler} />
 
-				{/* {props.expenses.map((expense) => {
-          return (
-            <ExpenseItem
-              key={expense.id} //https://reactjs.org/docs/lists-and-keys.html#keys
-              title={expense.title}
-              amount={expense.amount}
-              date={expense.date}d
-            />
-          );
-        })} */}
+				{props.expenses.map((expense) => {
+					return (
+						<ExpenseItem
+							key={expense.id} //https://reactjs.org/docs/lists-and-keys.html#keys
+							title={expense.title}
+							amount={expense.amount}
+							date={expense.date}
+							d
+						/>
+					);
+				})}
 
 				{/* TODO Filter logic */}
 				{props.expenses.filter((expense) => {

@@ -8,7 +8,7 @@ function ExpenseItem(props) {
 	const [ title, setTitle ] = useState(props.title);
 
 	const changeNameHandler = () => {
-		const newName = prompt();
+		const newName = prompt('Set new Title:', title);
 		setTitle(newName);
 	};
 
@@ -16,10 +16,9 @@ function ExpenseItem(props) {
 		<Card className="expense-item">
 			<ExpenseDate date={props.date} />
 			<div className="expense-item__description">
-				<h2>{props.title}</h2>
+				<h2 onClick={changeNameHandler}>{title}</h2>
 				<div className="expense-item__price">${props.amount}</div>
 			</div>
-			<button onClick={changeNameHandler}>Change Title</button>
 		</Card>
 	);
 }
